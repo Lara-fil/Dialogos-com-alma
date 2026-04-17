@@ -3,11 +3,11 @@
   "themes": {
     "dialogo-com-alma": {
       "name": "Diálogos com a Alma",
-      "repo": "https://github.com/Lara-fil/Funcional/tree/main",
-      "zip": "https://github.com/Lara-fil/Funcional/archive/refs/heads/main.zip",
+      "repo": "https://github.com/Lara-fil/Dialogos-com-alma",
+      "zip": "https://github.com/Lara-fil/Dialogos-com-alma/releases/download/v1.0.0/dialogo-com-alma.zip",
       "summary": "Tema filosófico vintage com tipografia serif elegante, estilo editorial e fundo creme.",
       "version": "1.0.0",
-      "image": "https://raw.githubusercontent.com/Lara-fil/Funcional/main/preview.jpg"
+      "image": "https://raw.githubusercontent.com/Lara-fil/Dialogos-com-alma/main/preview.jpg"
     }
   }
 }
