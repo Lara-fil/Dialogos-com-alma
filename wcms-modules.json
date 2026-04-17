@@ -1,10 +1,10 @@
 {
   "version": 1,
   "themes": {
-    "dialogos-com-alma": {
+    "Dialogos-com-alma": {
       "name": "Dialogos com a Alma",
-      "repo": "https://github.com/Lara-fil/Dialogos-com-alma/tree/main",
-      "zip": "https://github.com/Lara-fil/Dialogos-com-alma/archive/refs/heads/main.zip",
+      "repo": "https://github.com/Lara-fil/Dialogos-com-alma",
+      "zip": "https://github.com/Lara-fil/Dialogos-com-alma/archive/main.zip",
       "summary": "Vintage editorial WonderCMS theme.",
       "version": "1.0.0",
       "image": "https://raw.githubusercontent.com/Lara-fil/Dialogos-com-alma/main/preview.jpg"
