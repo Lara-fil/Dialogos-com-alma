@@ -1,13 +1,13 @@
 {
   "version": 1,
   "themes": {
-    "dialogo-com-alma": {
+    "Dialogos-com-alma": {
       "name": "Dialogos com a Alma",
-      "repo": "https://github.com/Lara-fil/Dialogos-com-alma",
-      "zip": "https://codeload.github.com/Lara-fil/Dialogos-com-alma/zip/refs/heads/main",
+      "repo": "https://github.com/Lara-fil/Dialogos-com-alma/tree/master",
+      "zip": "https://github.com/Lara-fil/Dialogos-com-alma/archive/master.zip",
       "summary": "Vintage editorial WonderCMS theme.",
       "version": "1.0.0",
-      "image": "https://raw.githubusercontent.com/Lara-fil/Dialogos-com-alma/main/preview.jpg"
+      "image": "https://raw.githubusercontent.com/Lara-fil/Dialogos-com-alma/master/preview.jpg"
     }
   }
 }
