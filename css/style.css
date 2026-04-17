@@ -5,6 +5,9 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -18,12 +21,10 @@ body {
 }
 
 /* ---- HEADER / NAV ---- */
-header {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  flex-wrap: nowrap !important;
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 24px;
   padding: 20px 48px;
   border-bottom: 1.5px solid #2c2c2a;
@@ -31,61 +32,44 @@ header {
 }
 
 .site-logo {
-  font-family: 'IM Fell English', Georgia, serif;
   font-size: 13px;
   color: #888780;
   letter-spacing: 0.04em;
   text-decoration: none;
-  display: inline-block;
   white-space: nowrap;
-  flex: 0 0 auto;
 }
 
-header nav {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  width: auto !important;
+.site-nav {
+  display: flex;
+  align-items: center;
 }
 
-header nav ul,
-header nav ol {
-  list-style: none !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  gap: 24px !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* muito importante: o menu do WonderCMS costuma sair como ul/li */
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
 }
 
-header nav li {
-  display: inline-block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: auto !important;
-  line-height: normal !important;
+.site-nav li {
+  margin: 0;
+  padding: 0;
 }
 
-header nav li a,
-header nav a {
-  font-family: 'IM Fell English', Georgia, serif;
+.site-nav a {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #5f5e5a;
   text-decoration: none;
-  display: inline-block !important;
-  white-space: nowrap;
-  transition: color 0.2s;
 }
 
-header nav li a:hover,
-header nav li a.active,
-header nav a:hover,
-header nav a.active {
+.site-nav a:hover,
+.site-nav a.active {
   color: #2c2c2a;
 }
 
@@ -94,29 +78,6 @@ main {
   max-width: 760px;
   margin: 0 auto;
   padding: 52px 24px 80px;
-}
-
-.page-header {
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #b4b2a9;
-}
-
-.page-label {
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #888780;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.page-label::after {
-  content: '';
-  flex: 1;
-  height: 0.5px;
-  background: #b4b2a9;
 }
 
 /* ---- TIPOGRAFIA ---- */
@@ -158,16 +119,8 @@ p {
 
 a {
   color: #2c2c2a;
-  text-decoration: underline;
-  text-decoration-color: #b4b2a9;
-  text-underline-offset: 3px;
 }
 
-a:hover {
-  text-decoration-color: #2c2c2a;
-}
-
-/* ---- CITAÇÕES ---- */
 blockquote {
   border-left: 2.5px solid #888780;
   padding: 4px 0 4px 22px;
@@ -190,16 +143,13 @@ blockquote cite {
   font-style: normal;
 }
 
-/* ---- SEPARADORES ---- */
 hr {
   border: none;
   border-top: 0.5px solid #b4b2a9;
   margin: 44px 0;
 }
 
-/* ---- LISTAS ---- */
-ul,
-ol {
+ul, ol {
   padding-left: 22px;
   margin-bottom: 18px;
 }
@@ -211,57 +161,11 @@ li {
   margin-bottom: 6px;
 }
 
-/* neutraliza listas no menu */
-header nav ul,
-header nav ol {
-  padding-left: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-header nav li {
-  font-size: inherit !important;
-  color: inherit !important;
-  margin-bottom: 0 !important;
-}
-
-/* ---- TABELAS ---- */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 28px 0;
-  font-size: 13px;
-}
-
-th {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #888780;
-  border-bottom: 1px solid #b4b2a9;
-  padding: 10px 12px;
-  text-align: left;
-  font-weight: 400;
-}
-
-td {
-  padding: 10px 12px;
-  border-bottom: 0.5px solid #d3d1c7;
-  color: #444441;
-}
-
-tr:last-child td {
-  border-bottom: none;
-}
-
-/* ---- IMAGENS ---- */
 img {
   max-width: 100%;
   display: block;
-  border-radius: 2px;
 }
 
-/* ---- FOOTER ---- */
 footer {
   border-top: 0.5px solid #b4b2a9;
   padding: 24px 48px;
@@ -280,24 +184,17 @@ footer a {
 
 /* ---- RESPONSIVO ---- */
 @media (max-width: 640px) {
-  header {
-    flex-direction: column !important;
-    align-items: center !important;
+  .site-header {
+    flex-direction: column;
+    align-items: center;
     padding: 16px 20px;
     text-align: center;
+  }
+
+  .site-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 14px;
-  }
-
-  header nav {
-    width: 100% !important;
-    justify-content: center !important;
-  }
-
-  header nav ul,
-  header nav ol {
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 14px !important;
   }
 
   h1 {
