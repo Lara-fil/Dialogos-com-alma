@@ -1,0 +1,252 @@
+/* ============================================
+   DIÁLOGOS COM A ALMA
+   Tema vintage / editorial para WonderCMS
+   ============================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'IM Fell English', Georgia, serif;
+  background-color: #f9f7f2;
+  color: #2c2c2a;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ---- HEADER / NAV ---- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  border-bottom: 1.5px solid #2c2c2a;
+  background-color: #f9f7f2;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-logo {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 13px;
+  color: #888780;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5f5e5a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #2c2c2a;
+}
+
+/* ---- MAIN ---- */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 52px 24px 80px;
+}
+
+.page-header {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b4b2a9;
+}
+
+.page-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888780;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-label::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: #b4b2a9;
+}
+
+/* ---- TIPOGRAFIA ---- */
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #2c2c2a;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #2c2c2a;
+  margin-top: 52px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid #b4b2a9;
+}
+
+h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #2c2c2a;
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  color: #444441;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+a {
+  color: #2c2c2a;
+  text-decoration: underline;
+  text-decoration-color: #b4b2a9;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+
+a:hover {
+  text-decoration-color: #2c2c2a;
+}
+
+/* ---- CITAÇÕES ---- */
+blockquote {
+  border-left: 2.5px solid #888780;
+  padding: 4px 0 4px 22px;
+  margin: 36px 0;
+}
+
+blockquote p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5f5e5a;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+blockquote cite {
+  font-size: 11px;
+  color: #888780;
+  letter-spacing: 0.04em;
+  font-style: normal;
+}
+
+/* ---- SEPARADORES ---- */
+hr {
+  border: none;
+  border-top: 0.5px solid #b4b2a9;
+  margin: 44px 0;
+}
+
+/* ---- LISTAS ---- */
+ul, ol {
+  padding-left: 22px;
+  margin-bottom: 18px;
+}
+
+li {
+  font-size: 15px;
+  color: #444441;
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+
+/* ---- TABELAS ---- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  font-size: 13px;
+}
+
+th {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888780;
+  border-bottom: 1px solid #b4b2a9;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 400;
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 0.5px solid #d3d1c7;
+  color: #444441;
+  vertical-align: top;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---- IMAGENS ---- */
+img {
+  max-width: 100%;
+  border-radius: 2px;
+  display: block;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  border-top: 0.5px solid #b4b2a9;
+  padding: 24px 48px;
+  text-align: center;
+  background-color: #f9f7f2;
+}
+
+footer p, footer a {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888780;
+  text-decoration: none;
+}
+
+/* ---- RESPONSIVO ---- */
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  h1 { font-size: 34px; }
+
+  main { padding: 36px 16px 60px; }
+
+  footer { padding: 20px 16px; }
+}
