@@ -1,6 +1,6 @@
 /* ============================================
    DIÁLOGOS COM A ALMA
-   Tema vintage / editorial para WonderCMS
+   Estilo editorial vintage
    ============================================ */
 
 *, *::before, *::after {
@@ -13,44 +13,39 @@ html, body {
 }
 
 body {
-  font-family: 'IM Fell English', Georgia, serif;
-  background-color: #f9f7f2;
-  color: #2c2c2a;
-  line-height: 1.7;
+  background: #f5f2ec;
+  color: #2b2a28;
+  font-family: "Libre Baskerville", Georgia, serif;
+  line-height: 1.75;
   font-size: 16px;
 }
 
-/* ---- HEADER / NAV ---- */
+/* ===== HEADER ===== */
+
 .site-header {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 40px 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  padding: 20px 48px;
-  border-bottom: 1.5px solid #2c2c2a;
-  background-color: #f9f7f2;
+  border-bottom: 1px solid #44403a;
 }
 
 .site-logo {
-  font-size: 13px;
-  color: #888780;
-  letter-spacing: 0.04em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #8b6f4e;
   text-decoration: none;
-  white-space: nowrap;
+  letter-spacing: 0.01em;
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
-}
-
-/* muito importante: o menu do WonderCMS costuma sair como ul/li */
 .site-nav ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 24px;
+  gap: 34px;
   margin: 0;
   padding: 0;
 }
@@ -61,151 +56,308 @@ body {
 }
 
 .site-nav a {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #5f5e5a;
   text-decoration: none;
+  color: #7c6448;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .site-nav a:hover,
 .site-nav a.active {
-  color: #2c2c2a;
+  color: #2b2a28;
 }
 
-/* ---- MAIN ---- */
-main {
-  max-width: 760px;
+/* ===== WRAP ===== */
+
+.page-wrap {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 52px 24px 80px;
+  padding: 64px 40px 100px;
 }
 
-/* ---- TIPOGRAFIA ---- */
-h1 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #2c2c2a;
-  margin-bottom: 12px;
-}
+/* ===== HERO / PRIMEIRA SECÇÃO ===== */
 
-h2 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 24px;
-  font-weight: 400;
-  color: #2c2c2a;
-  margin-top: 52px;
-  margin-bottom: 16px;
-  padding-bottom: 10px;
-  border-bottom: 0.5px solid #b4b2a9;
-}
-
-h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  color: #8b6f4e;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hero-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #b8aea0;
+}
+
+.hero-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(68px, 10vw, 112px);
+  line-height: 0.9;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  max-width: 760px;
+}
+
+.hero-title em,
+.hero-title i {
+  font-style: italic;
   font-weight: 400;
-  color: #2c2c2a;
-  margin-top: 32px;
-  margin-bottom: 10px;
+  color: #6f685f;
 }
 
-p {
-  font-size: 15px;
-  color: #444441;
-  line-height: 1.8;
-  margin-bottom: 18px;
+.hero-meta {
+  margin-top: 10px;
+  margin-bottom: 70px;
 }
 
-a {
-  color: #2c2c2a;
+.hero-name {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 24px;
+  font-style: italic;
+  color: #6d563e;
+  margin-bottom: 6px;
+}
+
+.hero-submeta {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  color: #8b6f4e;
+  letter-spacing: 0.06em;
+}
+
+/* ===== LINHA GRANDE ===== */
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #b8aea0;
+  margin: 0 0 38px;
+}
+
+/* ===== CONTEÚDO ===== */
+
+main h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(68px, 10vw, 112px);
+  line-height: 0.9;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  max-width: 760px;
+}
+
+main h1 em,
+main h1 i {
+  font-style: italic;
+  font-weight: 400;
+  color: #6f685f;
+}
+
+main h2 {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 18px 0 28px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #8b6f4e;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: none;
+  padding: 0;
+}
+
+main h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #b8aea0;
+}
+
+main h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 38px 0 14px;
+  color: #2b2a28;
+}
+
+main p {
+  max-width: 920px;
+  font-size: 17px;
+  color: #3e3a35;
+  margin: 0 0 18px;
+}
+
+main strong {
+  color: #2b2a28;
+}
+
+main a {
+  color: #6d563e;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(109, 86, 62, 0.35);
+}
+
+main a:hover {
+  color: #2b2a28;
+  border-bottom-color: rgba(43, 42, 40, 0.45);
+}
+
+main hr {
+  border: none;
+  border-top: 1px solid #b8aea0;
+  margin: 48px 0;
+}
+
+main ul,
+main ol {
+  max-width: 900px;
+  padding-left: 24px;
+  margin: 0 0 22px;
+}
+
+main li {
+  margin-bottom: 8px;
+  color: #3e3a35;
+  font-size: 17px;
 }
 
 blockquote {
-  border-left: 2.5px solid #888780;
-  padding: 4px 0 4px 22px;
-  margin: 36px 0;
+  max-width: 860px;
+  margin: 34px 0;
+  padding-left: 22px;
+  border-left: 2px solid #b8aea0;
 }
 
 blockquote p {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 16px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  line-height: 1.45;
   font-style: italic;
-  color: #5f5e5a;
-  line-height: 1.7;
-  margin-bottom: 8px;
+  color: #5f574d;
 }
 
 blockquote cite {
-  font-size: 11px;
-  color: #888780;
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8b6f4e;
   letter-spacing: 0.04em;
   font-style: normal;
-}
-
-hr {
-  border: none;
-  border-top: 0.5px solid #b4b2a9;
-  margin: 44px 0;
-}
-
-ul, ol {
-  padding-left: 22px;
-  margin-bottom: 18px;
-}
-
-li {
-  font-size: 15px;
-  color: #444441;
-  line-height: 1.8;
-  margin-bottom: 6px;
 }
 
 img {
   max-width: 100%;
   display: block;
+  margin: 28px 0;
 }
 
-footer {
-  border-top: 0.5px solid #b4b2a9;
-  padding: 24px 48px;
-  text-align: center;
-  background-color: #f9f7f2;
+/* ===== PRIMEIRO PARÁGRAFO MAIS NOBRE ===== */
+
+main > p:first-of-type {
+  font-size: 19px;
+  max-width: 980px;
 }
 
-footer p,
-footer a {
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #888780;
+/* ===== FOOTER ===== */
+
+.site-footer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 22px 40px 40px;
+  border-top: 1px solid #b8aea0;
+}
+
+.site-footer,
+.site-footer p,
+.site-footer a {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 15px;
+  color: #8b6f4e;
   text-decoration: none;
 }
 
-/* ---- RESPONSIVO ---- */
-@media (max-width: 640px) {
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
   .site-header {
+    padding: 22px 20px 16px;
     flex-direction: column;
-    align-items: center;
-    padding: 16px 20px;
-    text-align: center;
+    gap: 14px;
+    align-items: flex-start;
   }
 
   .site-nav ul {
     flex-wrap: wrap;
+    gap: 16px 22px;
+  }
+
+  .page-wrap {
+    padding: 42px 20px 70px;
+  }
+
+  .hero-title,
+  main h1 {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    align-items: center;
+    text-align: center;
+  }
+
+  .site-logo {
+    font-size: 18px;
+  }
+
+  .site-nav ul {
     justify-content: center;
-    gap: 14px;
   }
 
-  h1 {
-    font-size: 34px;
+  .hero-label,
+  main h2 {
+    font-size: 14px;
+    gap: 12px;
   }
 
-  main {
-    padding: 36px 16px 60px;
+  .hero-title,
+  main h1 {
+    font-size: 48px;
+    line-height: 0.95;
   }
 
-  footer {
-    padding: 20px 16px;
+  .hero-name {
+    font-size: 20px;
+  }
+
+  .hero-submeta {
+    font-size: 15px;
+  }
+
+  main p,
+  main li {
+    font-size: 16px;
+  }
+
+  blockquote p {
+    font-size: 22px;
+  }
+
+  .site-footer {
+    padding: 20px;
   }
 }
