@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?></title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <?= $Wcms->css() ?>
     <link rel="stylesheet" href="<?= $Wcms->asset('style.css') ?>">
 </head>
@@ -16,7 +20,7 @@
 
 <header class="site-header">
     <a class="site-logo" href="<?= $Wcms->url() ?>">
-        <?= $Wcms->get('config', 'siteTitle') ?>
+        Webfólio
     </a>
 
     <nav class="site-nav">
@@ -24,11 +28,11 @@
     </nav>
 </header>
 
-<main>
+<main class="page-wrap">
     <?= $Wcms->page('content') ?>
 </main>
 
-<footer>
+<footer class="site-footer">
     <?= $Wcms->footer() ?>
 </footer>
 
