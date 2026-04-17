@@ -1,35 +1,45 @@
 <?php global $Wcms ?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="<?= $Wcms->get('config', 'siteLang') ?>">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?></title>
-  <?= $Wcms->css() ?>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="<?= $Wcms->asset('css/style.css') ?>">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?></title>
+
+    <?= $Wcms->css() ?>
+    <link rel="stylesheet" href="<?= $Wcms->asset('css/style.css') ?>">
 </head>
 <body>
-  <?= $Wcms->settings() ?>
-  <?= $Wcms->alerts() ?>
 
-  <header>
-    <a href="<?= $Wcms->url() ?>" class="site-logo"><?= $Wcms->get('config', 'siteTitle') ?></a>
-    <nav><?= $Wcms->menu() ?></nav>
-  </header>
+<?= $Wcms->settings() ?>
+<?= $Wcms->alerts() ?>
 
-  <main>
-    <div class="content">
-      <?= $Wcms->page('content') ?>
-    </div>
-    <aside><?= $Wcms->block('subside') ?></aside>
-  </main>
+<header>
+    <a class="site-logo" href="<?= $Wcms->url() ?>">
+        <?= $Wcms->get('config', 'siteTitle') ?>
+    </a>
 
-  <footer>
-    <p><?= $Wcms->footer() ?></p>
-  </footer>
+    <nav>
+        <ul>
+            <?= $Wcms->menu() ?>
+        </ul>
+    </nav>
+</header>
 
-  <?= $Wcms->js() ?>
+<main>
+    <?= $Wcms->page('content') ?>
+</main>
+
+<aside>
+    <?= $Wcms->block('subside') ?>
+</aside>
+
+<footer>
+    <?= $Wcms->footer() ?>
+</footer>
+
+<?= $Wcms->js() ?>
 </body>
 </html>
